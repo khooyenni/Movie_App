@@ -32,9 +32,12 @@ class MoviePage extends StatefulWidget {
 
 class _MoviePageState extends State<MoviePage> {
   TextEditingController searchMovie = TextEditingController();
-  String title = "", actors = "", released = "", genre = "", desc = "";
-
-  var imageUrl = "https://tireman.co/assets/img/nodata.png";
+  var title = "",
+      actors = "",
+      released = "",
+      genre = "",
+      desc = "",
+      imageUrl = "https://tireman.co/assets/img/nodata.png";
 
   final player = AudioPlayer();
 
@@ -54,6 +57,7 @@ class _MoviePageState extends State<MoviePage> {
             },
             decoration: InputDecoration(
                 hintText: 'Enter movie title',
+                prefixIcon: const Icon(Icons.search),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30.0))),
           ),
@@ -116,7 +120,7 @@ class _MoviePageState extends State<MoviePage> {
 
   Future<void> _getMovie() async {
     ProgressDialog progressDialog = ProgressDialog(context,
-        message: const Text("Progress"), title: const Text("Searching..."));
+        message: const Text("Progress....."), title: const Text("Searching Movie"));
     progressDialog.show();
 
     var apiid = "2e811de8";
