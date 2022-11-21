@@ -1,5 +1,4 @@
-# lab_assignment_1
-
+# movie_app
 A new Flutter project.
 
 ## Getting Started
